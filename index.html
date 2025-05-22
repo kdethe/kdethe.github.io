@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Website 1</title>
+    <title>Sample Website - Improve Your SEO and Accessibility</title>
+    <meta name="description" content="Learn how to enhance your website's SEO and accessibility with best practices for HTML, CSS, and JavaScript.">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Single HTML page.</h1>
+    <header>
+        <h1>Welcome to Our Single HTML Page</h1>
+    </header>
+    <main>
+        <section>
+            <h2>About Our Page</h2>
+            <p>This page is designed to demonstrate best practices in SEO and accessibility for web development.</p>
+        </section>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#about" aria-label="Learn more about our page">About</a></li>
+                <li><a href="#contact" aria-label="Contact us for more information">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="about">
+            <h2>About Section</h2>
+            <p>This section provides information about the purpose and content of this page.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form aria-label="Contact form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" aria-required="true">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" aria-required="true">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Sample Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
